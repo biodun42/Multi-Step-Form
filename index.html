@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/favicon-32x32.png" />
+    <title>Multi_Step_Form</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/Responsive.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left">
+        <div class="button-one">
+          <button id="one" class="btn-one">1</button>
+          <div class="step">
+            <p>step 1</p>
+            <h2>Your info</h2>
+          </div>
+        </div>
+        <div class="button-two">
+          <button id="two" class="btn-two">2</button>
+          <div class="step">
+            <p>step 2</p>
+            <h2>Select Plan</h2>
+          </div>
+        </div>
+        <div class="button-three">
+          <button id="three" class="btn-three">3</button>
+          <div class="step">
+            <p>step 3</p>
+            <h2>Add-ons</h2>
+          </div>
+        </div>
+        <div class="button-four">
+          <button id="four" class="btn-four">4</button>
+          <div class="step">
+            <p>step 4</p>
+            <h2>Summary</h2>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="header">
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and number.</p>
+        </div>
+        <form action="Name">
+          <div class="space">
+            <label for="Name">Name</label>
+            <span>This field is required</span>
+          </div>
+          <input type="text" id="name" placeholder="e.g Stephen King" />
+        </form>
+        <form action="Address">
+          <div class="space">
+            <label for="address">Email Address</label>
+            <span>This field is required</span>
+          </div>
+          <input
+            type="text"
+            id="email"
+            placeholder="e.g Stephenking@gmail.com"
+          />
+        </form>
+        <form action="Number">
+          <div class="space">
+            <label for="Name">Phone Number</label>
+            <span>This field is required</span>
+          </div>
+          <input
+            type="number"
+            id="number"
+            placeholder="e.g +234 808 875 1455"
+          />
+        </form>
+        <div class="button">
+          <button onclick="nextLevel()" class="btn">Next Step</button>
+        </div>
+      </div>
+      <div class="third">
+        <div class="header">
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+        </div>
+        <div class="cards">
+          <div id="cardone" onclick="clickedCardOne()" class="card">
+            <img src="assets/images/icon-arcade.svg" alt="" />
+            <h4 id="arcade">Arcade</h4>
+            <p id="textone">$90/yr</p>
+            <h5 class="none">get one free</h5>
+          </div>
+          <div id="cardtwo" onclick="clickedCardTwo()" class="card">
+            <img src="assets/images/icon-advanced.svg" alt="" />
+            <h4 id="advance">Advance</h4>
+            <p id="texttwo">$120/yr</p>
+            <h5 class="none">get one free</h5>
+          </div>
+          <div id="cardthree" onclick="clickedCardThree()" class="card">
+            <img src="assets/images/icon-pro.svg" alt="" />
+            <h4 id="pro">Pro</h4>
+            <p id="textthree">$150/yr</p>
+            <h5 class="none">get one free</h5>
+          </div>
+        </div>
+        <div class="switch">
+          <p id="month">Yearly</p>
+          <div class="toggle-master">
+            <button onclick="changeOne()" id="onee"></button>
+            <button onclick="changeTwo()" id="twoo"></button>
+          </div>
+          <p id="year">Monthly</p>
+        </div>
+        <div class="button_one">
+          <button onclick="previousLevel()" class="btnone">Go Back</button>
+          <button onclick="nextLevelTwo()" id="nextplan" class="btn">Next Step</button>
+        </div>
+      </div>
+      <div class="add-ons">
+        <div class="header">
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance gaming experience.</p>
+        </div>
+        <div class="boxes">
+          <div id="box-one" class="box">
+            <div id="checkbox-part">
+            <input id="tickone" type="checkbox">
+            <div class="service">
+              <h4 id="online">Online service</h4>
+              <p>Access to multiplayer games</p>
+            </div>
+            </div>
+            <div class="price">
+              <p id="textone-mo">+$10/yr</p>
+            </div>
+          </div>
+          <div id="box-two" class="box">
+            <div id="checkbox-part">
+            <input id="ticktwo" type="checkbox">
+            <div class="service">
+              <h4 id="store">Larger storage</h4>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            </div>
+            <div class="price">
+              <p id="texttwo-mo">+$20/yr</p>
+            </div>
+          </div>
+          <div id="box-three" class="box">
+            <div id="checkbox-part">
+            <input id="tickthree" type="checkbox">
+            <div class="service">
+              <h4 id="custom">Customizable profile</h4>
+              <p>Custom theme on your profile</p>
+            </div>
+            </div>
+            <div class="price">
+              <p id="textthree-mo">+$20/yr</p>
+            </div>
+          </div>
+        </div>
+        <div class="button_two">
+          <button onclick="previousPlan()" class="btnone">Go Back</button>
+          <button onclick="nextLevelThree()" class="btn">Next Step</button>
+        </div>
+      </div>
+      <div class="summary">
+        <div class="header">
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before Confirming.</p>
+        </div>
+        <div class="total-payment">
+          <div class="arcade">
+            <div id="year">
+              <h4 id="answer">Arcade (Yearly)</h4>
+              <p><a id="change" onclick="changePlan()" href="#">Change</a></p>
+            </div>
+            <div class="year">
+              <p id="answerOne">$90/yr</p>
+              </div>
+          </div>
+          <hr>
+          <div class="online-service">
+            <div id="yeartwo">
+              <h4 id="online-answer">Online service</h4>
+              </div>
+            <div class="yeartwo">
+              <p id="clickedanswerone">+$10/yr</p>
+              </div>
+          </div>
+          <div class="storage">
+            <div id="yeartwo">
+              <h4 id="larger-answer">Larger storage</h4>
+              </div>
+            <div class="yeartwo">
+              <p id="clickedanswertwo">+$20/yr</p>
+              </div>
+          </div>
+        </div>
+        <div class="total">
+          <div id="yeartwo">
+            <h4 id="total-text">Total (per year)</h4>
+            </div>
+          <div class="yearone">
+            <p id="final-result">$120/yr</p>
+            </div>
+      </div>
+      <div class="button_three">
+        <button onclick="previousLevelTwo()" class="btnone">Go Back</button>
+        <button id="lastpart" onclick="lastPage()" class="btn">Confirm</button>
+      </div>
+    </div>
+    <div class="thank-you">
+      <div class="thanks">
+        <div class="Thank-img">
+          <img src="assets/images/icon-thank-you.svg" alt="">
+        </div>
+        <div class="text">
+          <h1>Thank you!</h1>
+          <p>Thanks for confirming your subscription! We hope fun using our platform. If you ever need support, please feel free to email us at <b>muhammedabiodun42@gmaiil.com</b></p>
+          </div>
+      </div>
+      </div>
+      </div>
+    <script src="app.js"></script>
+  </body>
+</html>

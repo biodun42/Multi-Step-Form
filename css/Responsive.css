@@ -1,0 +1,185 @@
+@media screen and (max-width: 866px) {
+  body {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background-color: hsl(0, 0%, 100%);
+  }
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    gap: 1rem;
+  }
+  .left {
+    background-color: url(../assets/images/bg-sidebar-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom left 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+    border-radius: 0;
+    padding: 60px;
+    padding-bottom: 170px;
+  }
+  .step {
+    display: none;
+  }
+  .btn-one,
+  .btn-two,
+  .btn-three,
+  .btn-four {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 100%;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: lighter;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2.5rem;
+    padding: 1rem;
+  }
+  .button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .header{
+
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .header h1{
+    font-size: 32px;
+  }
+  .third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2.5rem;
+    padding: 1rem;
+  }
+  .add-ons{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2.5rem;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+  }
+  .summary{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -2.5rem;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+  }
+  .thank-you{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -10px;
+    padding: 1rem;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    display: none;
+  }
+}
+@media screen and (max-width: 439px) {
+  .cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .card{
+    width: 362px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .total-payment{
+    padding: 1rem;
+  }
+    .right{
+        padding: 0.5rem;
+    }
+    .header p{
+        font-size: 14px;
+    }
+    .service h4{
+      font-size: 14px;
+    }
+    .service p{
+      font-size: 10px;
+    }
+    #checkbox-part{
+      gap: 1rem;
+    }
+    #checkbox-part input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+    }
+    .price p{
+      font-size: 10px;
+    }
+    #year h4{
+      font-size: 12px;
+    } 
+    #year p a{
+      font-size: 10px;
+    }
+    .year p{
+      font-size: 17px;
+    }
+    .yeartwo p{
+      font-size: 15px;
+    }
+    .yearone p{
+      font-size: 18px;
+    }
+    #yeartwo h4{
+      font-size: 12px;
+    }
+    .thank-you{
+      padding-top: 80px;
+      padding-bottom: 130px;
+    }
+}
+@media screen and (max-width: 362px){
+  .card{
+    width: 280px;
+  }
+    .header p{
+        font-size: 12px;
+    }
+}

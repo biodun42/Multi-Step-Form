@@ -1,0 +1,563 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: hsl(217, 100%, 97%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.wrapper {
+  width: 900px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  gap: 4rem;
+}
+.left {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  background-image: url("../assets/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 15px;
+  padding: 30px;
+  padding-top: 40px;
+  padding-right: 90px;
+  padding-bottom: 300px;
+}
+.button-one,
+.button-two,
+.button-three,
+.button-four {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-one,
+.btn-two,
+.btn-three,
+.btn-four {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 100%;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: lighter;
+}
+.step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 3px;
+}
+.step p {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.step h2 {
+  color: hsl(231, 100%, 99%);
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 50px;
+  padding: 0 60px 0 0;
+}
+.right.active {
+  display: none;
+}
+.header h1 {
+  color: hsl(213, 96%, 18%);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.header p {
+  color: hsl(231, 11%, 63%);
+  font-size: 15px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+.space {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+label {
+  color: hsl(213, 96%, 18%);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+span {
+  color: hsl(0, 100%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: none;
+}
+#name,
+#email,
+#number {
+  width: 100%;
+  padding: 13px;
+  border-radius: 7px;
+  border: 2px solid hsl(231, 11%, 63%);
+  outline: none;
+  font-size: 16px;
+  color: hsl(213, 96%, 18%);
+  cursor: pointer;
+}
+#name:focus,
+#email:focus,
+#number:focus {
+  border: 2px solid hsl(213, 96%, 18%);
+}
+#name::placeholder,
+#email::placeholder,
+#number::placeholder {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+}
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+}
+.btn {
+  width: 120px;
+  padding: 13px;
+  border-radius: 7px;
+  border: none;
+  background-color: hsl(213, 96%, 18%);
+  cursor: pointer;
+  outline: none;
+  color: hsl(231, 100%, 99%);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.btn:active {
+  opacity: 0.8;
+}
+.third {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 50px;
+  padding: 0 60px 0 0;
+  display: none;
+}
+.cards {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.card {
+  border: 2px solid hsl(217, 100%, 97%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
+  padding: 1.5rem 2rem 1.5rem 1rem;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.card img {
+  margin-bottom: 2rem;
+}
+.card h4 {
+  color: hsl(213, 96%, 18%);
+  font-size: 18px;
+  font-weight: 700;
+}
+.card p {
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+}
+.card h5 {
+  color: hsl(213, 96%, 18%);
+  font-size: 13px;
+  font-weight: 700;
+}
+.switch {
+  background-color: hsl(205, 86%, 97%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+#month {
+  color: hsl(231, 11%, 63%);
+  font-weight: 500;
+}
+#year {
+  color: hsl(213, 96%, 18%);
+  font-weight: 500;
+}
+.toggle-master {
+  background-color: hsl(213, 96%, 18%);
+  width: 45px;
+  height: 8px;
+  border-radius: 20px;
+  padding: 0.6rem 0 0.6rem 3.5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 7px;
+}
+.toggle-master button {
+  border-radius: 50%;
+  padding: 6.5px;
+  border: none;
+}
+.toggle-master button:hover {
+  cursor: pointer;
+}
+.toggle-master button:nth-child(1) {
+  background-color: white;
+}
+.toggle-master button:nth-child(2) {
+  background-color: white;
+  margin-left: 1.5rem;
+  display: none;
+}
+.button_one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 36px;
+}
+.btnone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  padding: 13px;
+  border-radius: 7px;
+  border: none;
+  background-color: hsl(205, 86%, 97%);
+  cursor: pointer;
+  outline: none;
+  color: hsl(231, 11%, 63%);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.btnone:active {
+  opacity: 0.8;
+}
+.add-ons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 50px;
+  padding: 0 60px 0 0;
+}
+.add-ons.active {
+  display: none;
+}
+.boxes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+  padding: 1.4rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+#checkbox-part {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+#checkbox-part input[type="checkbox"] {
+  width: 19px;
+  height: 19px;
+  border: 1px solid hsl(213, 96%, 18%);
+  border-radius: 50px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  gap: 5px;
+}
+.service h4 {
+  font-size: 17px;
+  color: hsl(213, 96%, 18%);
+  font-weight: 700;
+}
+.service p {
+  color: hsl(231, 11%, 63%);
+  font-size: 15px;
+  font-weight: 500;
+}
+.price p {
+  color: hsl(243, 100%, 62%);
+  font-size: 17px;
+  font-weight: 700;
+}
+.button_two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+}
+.summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  margin-top: 50px;
+  padding: 0 60px 0 0;
+}
+.summary.active {
+  display: none;
+}
+.total-payment {
+  padding: 2rem 2rem 2rem 1.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1.5rem;
+  background-color: hsl(205, 86%, 97%);
+  border-radius: 10px;
+}
+.total-payment hr {
+  width: 100%;
+  opacity: 0.5;
+}
+.arcade {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#year{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+}
+#year h4{
+  color: hsl(213, 96%, 18%);
+  font-size: 16px;
+  font-weight: 700;
+}
+#year p a{
+  font-size: 14px;
+  color: hsl(231, 11%, 63%);
+}
+.year{
+  display: flex;
+  align-items: center;
+}
+.year p{
+  color: hsl(213, 96%, 18%);
+  font-size: 20px;
+  font-weight: 700;
+}
+#yeartwo h4{
+  color: hsl(231, 11%, 63%);
+  font-size: 14px;
+  font-weight: 500;
+}
+.yeartwo{
+  display: flex;
+  align-items: center;
+}
+.yeartwo p{
+  color: hsl(213, 96%, 18%);
+  font-size: 17px;
+  font-weight: 500;
+}
+.online-service {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.storage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: -0.5rem;
+}
+.total {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  margin-top: -1.5rem;
+}
+.yeartwo{
+  display: flex;
+  align-items: center;
+}
+
+.yearone p{
+  color: hsl(243, 100%, 62%);
+  font-size: 22px;
+  font-weight: 700;
+}
+.button_three {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+.thank-you{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 150px;
+  padding: 0 60px 0 30px;
+  display: none;
+}
+.thanks{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.Thank-img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text h1{
+  color: hsl(213, 96%, 18%);
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.text p{
+  line-height: 1.8;
+  text-align: center;
+  color: hsl(231, 11%, 63%);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
